@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h1 id="sentence">
+        szia uram
+    </h1>
+<script>
+    var sentenceNode=document.getElementById("sentence")
+    var sentence =sentenceNode.innerText
+
+    var upperSentence = sentence.toUpperCase()
+    var lowerSentence =sentence.toLocaleLowerCase()
+    var firstTenChars = sentence.substring(0,10)
+
+    var allWords=sentence.split(" ")
+    console.log(allWords)
+
+    var bracketWords= "("+ allWords.join(")(") + ")"
+    var middleWords =allWords.slice(0, 3)
+    var makeSentence = middleWords.join(" ")
+    sentenceNode.innerText=makeSentence
+</script>    
+    
+</body>
+</html>
