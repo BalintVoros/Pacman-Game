@@ -1,0 +1,38 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px;
+    height: 560px;
+
+}
+  
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.pac-dot {
+    background-image: url("coin.png");
+
+}
+
+.wall {
+    background-image: url("wall.png");
+}
+
+.blinky {
+    background-image: url("ghost1.png");
+
+}
+
+.pinky {
+    background-image: url("ghost2.png");
+}
+
+
+
+.pac-man {
+    background-image: url("pacman.png");
+
+}
+

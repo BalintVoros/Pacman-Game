@@ -1,13 +1,131 @@
-<html>
-<head>
-<title>101</title>
-<meta name="description" content="Intro to HTML & CSS - Title Elements">
-  <meta charset="utf-8">
-  <meta name="viewport" content="user-scalable=0, initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, minimal-ui=1">
-<h1>This is the header of the website</h1>
-</head>
-<body>
-<h2>this is a sub header of the website</h2>
-<h3>this is even smaller than the header</h3>
-</body>
+<!DOCTYPE html>
+<html lang="hu-HU" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pac-man</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div class="grid"></div>
+
+    <h3>Eredmény:<span id="score"></span></h3>
+
+    <div class="d-inline-flex p-2  flex-column bd-highlight">
+      <div class="mb-3">
+        <label for="username" class="form-label">Játékos neve</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Andor">
+      </div>
+      <button type="button" class="btn btn-success" id="start">Kezdés</button>
+    </div>
+
+
+    <div class="modal" id="myModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="restart" data-bs-dismiss="modal">Újra</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="scoreboard" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="helpdesk" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>                        
+              <ul class="list-group list-group-flush">
+
+                <li class="list-group-item">
+                   <span>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                      </svg>
+                </span>
+                <span>
+                  felfele menethet nyomja a felfele nyilat
+                </span>
+                </li>
+
+                <li class="list-group-item">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                  </span>
+                <span>
+                  lefele menethet nyomja a lefele nyilat
+                </span>
+               </li>
+
+               <li class="list-group-item">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+                </span>
+                <span>
+                  jobbra menethethez nyomja a jobb oldali nyilat
+                </span>
+              </li>
+
+              <li class="list-group-item">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                  </svg>
+                </span>
+                <span>
+                  balra menethethez nyomja a bal oldali nyilat
+                </span>
+              </li>
+
+              <li class="list-group-item">
+                <span>
+                  <span class="fw-bold">s</span> betűvel lehet gyorsítani
+                </span>
+              </li>
+
+              <li class="list-group-item">
+                <span>
+                  <span class="fw-bold">c</span> betűvel lehet lassítani
+                </span>
+              </li>
+
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
 </html>
