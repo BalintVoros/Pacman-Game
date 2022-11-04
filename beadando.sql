@@ -11,4 +11,3 @@ CREATE TABLE IF NOT EXISTS `scoreboard` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Az adatok exportálása nem lett kiválasztva.
