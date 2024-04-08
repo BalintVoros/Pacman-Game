@@ -1,3 +1,9 @@
-# Javascript
+# Pacman-game
 
-# javascript és egyéb dolgok a readme fájl commitban
+# html/js/php
+
+# Futtatás:
+# Elindítjuk a Xampp-ot
+# Apache server indítása
+# Fájlok elhelyezése a Xammp html könyvtárában
+# localhost-on elérhetjük a játékot ahol a Start.html futtatásával elkezdhetünk játszani.
