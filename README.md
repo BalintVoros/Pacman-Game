@@ -8,8 +8,8 @@ html/js/php
  Fájlok elhelyezése a Xammp html könyvtárában
  localhost-on elérhetjük a játékot ahol a Start.html futtatásával elkezdhetünk játszani.
 
- #Vagy
+ # Vagy
  A https://balintvoros.github.io/Pacman-Game/ Oldalon
 
-#Kezelés
+# Kezelés
 ---H betű útmutató név megadás után nyilakkal való mozgás
