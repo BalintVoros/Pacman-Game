@@ -1,4 +1,20 @@
+
 # Pacman-game
+
+used html/js/php
+
+# Run:
+ Start Xampp
+ Start Apache server
+ Place files in Xammp html directory
+ On localhost we can access the game where we can start playing by running Start.html.
+
+ # Or
+ At https://balintvoros.github.io/Pacman-Game/
+
+# Manage
+---H letter guide name after entering arrow keys movement
+# Pacman-game Magyar
 
 html/js/php
 
